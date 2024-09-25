@@ -12,7 +12,7 @@ export class DataService {
 
   private patientUrl = 'https://dev-api.evitalrx.in/v1/fulfillment/patients/add';
 
-  private checkOut = 'https://dev-api.evitalrx.in/v1/fulfillment/orders/place_order';  // Replace with actual order API
+  private checkOut = 'https://dev-api.evitalrx.in/v1/fulfillment/orders/place_order';  
   
   private view = 'https://dev-api.evitalrx.in/v1/fulfillment/patients/view'
 
