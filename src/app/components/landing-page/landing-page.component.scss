@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(30, 210, 171);
+}
+.content {
+  height: 600px; 
+  width: 100%; 
+  background-image: url(https://static.vecteezy.com/system/resources/previews/016/962/364/non_2x/pharmacy-with-pharmacist-woman-at-counter-desk-free-vector.jpg); /* Path to the image */
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white; 
+}

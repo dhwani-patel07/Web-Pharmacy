@@ -1,0 +1,38 @@
+<mat-card class="checkout-card">
+  <!-- Title -->
+  <h2 class="checkout-title">Checkout</h2>
+
+  <!-- Patient Details Section -->
+  <section class="section-spacing">
+    <h3 class="section-title">Patient Details</h3>
+    <div *ngFor="let data of patientdetail" class="patient-details">
+      <p><strong>First Name:</strong> {{ data?.firstname }}</p>
+      <p><strong>Last Name:</strong> {{ data?.lastname }}</p>
+      <p><strong>Mobile:</strong> {{ data?.mobile }}</p>
+    </div>
+  </section>
+
+  <!-- Selected Medicines Section -->
+  <section class="section-spacing">
+    <h3 class="section-title">Selected Medicines</h3>
+    <mat-list>
+      <mat-list-item *ngFor="let medicine of cart" class="medicine-item">
+        <div class="medicine-info">
+         Medicine Name:{{ medicine.medicine_name }} - ₹{{ medicine.price }} 
+         <p>Quantity: {{medicine.quantity}}</p>
+        </div>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+    </mat-list>
+    <p class="total-amount"><strong>Total:</strong> ₹{{ totalAmount }}</p>
+  </section>
+
+  <!-- Action Buttons Section -->
+  <section class="section-spacing action-buttons">
+    <button mat-raised-button color="primary" (click)="placeOrder()">Place Order</button>
+  </section>
+
+  <!-- Success and Error Messages -->
+  <div *ngIf="successMessage" class="success-message">{{ successMessage }}</div>
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+</mat-card>

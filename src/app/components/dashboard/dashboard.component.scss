@@ -1,0 +1,102 @@
+.dashboard-container {
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  //margin-bottom: 20px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.mat-toolbar {
+  background: rgb(206, 159, 227);
+  color: purple;
+}
+
+.search-field {
+  width: 700px;
+  height: 40px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.medicine-list {
+  height: 590px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  overflow: scroll
+}
+
+.medicine-card {
+  width: 300px;
+  background-color: #fafafa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.medicine-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.mat-card-header {
+  background-color: #e0f7fa;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.mat-card-title {
+  font-size: 1.2rem;
+  color: #00796b;
+}
+
+.mat-card-subtitle {
+  font-size: 0.9rem;
+  color: #00796b;
+}
+
+.mat-card-content p {
+  margin: 5px 0;
+}
+
+.mat-card-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 16px;
+}
+
+button[mat-raised-button] {
+  font-weight: bold;
+}
+
+.no-results {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #f44336;
+}
+
+.dashboard-bg {
+  background-image: url(https://static.vecteezy.com/system/resources/previews/025/515/181/non_2x/pharmacy-shop-with-customers-pharmacist-consulting-patient-people-buying-drugs-drugstore-with-medicine-on-shelves-illustration-vector.jpg);
+  width: 100%;
+  height: 630px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
+}
+
+.cart-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}

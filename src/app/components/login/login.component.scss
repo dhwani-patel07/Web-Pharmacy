@@ -1,0 +1,104 @@
+.login-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  
+  .left-content {
+    flex: 1;
+    background-image: url(https://img.freepik.com/premium-vector/modern-interior-pharmacy-male-pharmacist_169241-3431.jpg);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   // padding: 2rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .left-content .logo {
+    width: 150px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .left-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .left-content p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+
+  .right-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+  }
+  
+  
+  .login-card {
+    width: 100%;
+    max-width: 400px; 
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    border-radius: 10px; 
+    background-color: rgb(84, 97, 91); }
+  
+  .login-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #d8e6e5; 
+  }
+  
+  .mat-form-field {
+    margin-bottom: 20px;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .login-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  button[mat-raised-button] {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease-in-out;
+  }
+  
+  button[mat-raised-button]:hover {
+    background-color: #00695c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .login-container {
+      flex-direction: column;
+    }
+  
+    .left-content, .right-content {
+      flex: none;
+      width: 100%;
+      height: auto;
+    }
+  
+    .left-content {
+      padding: 1rem;
+    }
+  
+    .login-card {
+      margin: 1rem;
+    }
+  }

@@ -1,0 +1,127 @@
+<mat-card class="form-bg">
+  <form
+    [formGroup]="patientForm"
+    (ngSubmit)="onSubmit()"
+    style="background-color: rgb(206, 159, 227)"
+  >
+    <mat-form-field appearance="outline">
+      <mat-label>First Name</mat-label>
+      <input
+        matInput
+        formControlName="firstName"
+        placeholder="Enter first name"
+      />
+      <mat-error *ngIf="patientForm.get('firstName')?.hasError('required')"
+        >First name is required.</mat-error
+      >
+      <mat-error *ngIf="patientForm.get('firstName')?.hasError('minlength')"
+        >First name must be at least 2 characters long.</mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Last Name</mat-label>
+      <input
+        matInput
+        formControlName="lastName"
+        placeholder="Enter last name"
+      />
+      <mat-error *ngIf="patientForm.get('lastName')?.hasError('required')"
+        >Last name is required.</mat-error
+      >
+      <mat-error *ngIf="patientForm.get('lastName')?.hasError('minlength')"
+        >Last name must be at least 2 characters long.</mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Mobile</mat-label>
+      <input
+        matInput
+        formControlName="mobile"
+        placeholder="Enter mobile number"
+      />
+      <mat-error *ngIf="patientForm.get('mobile')?.hasError('required')"
+        >Mobile number is required.</mat-error
+      >
+      <mat-error *ngIf="patientForm.get('mobile')?.hasError('pattern')"
+        >Enter a valid 10-digit mobile number.</mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Zip Code</mat-label>
+      <input matInput formControlName="zipCode" placeholder="Enter zip code" />
+      <mat-error *ngIf="patientForm.get('zipCode')?.hasError('required')"
+        >Zip code is required.</mat-error
+      >
+      <mat-error *ngIf="patientForm.get('zipCode')?.hasError('pattern')"
+        >Enter a valid 6-digit zip code.</mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Date of Birth</mat-label>
+      <input
+        matInput
+        [matDatepicker]="picker"
+        formControlName="dateOfBirth"
+        placeholder="Select date of birth"
+      />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      <mat-error *ngIf="patientForm.get('dateOfBirth')?.hasError('required')"
+        >Date of birth is required.</mat-error
+      >
+      <mat-error *ngIf="patientForm.get('dateOfBirth')?.hasError('futureDate')">
+        Date of birth cannot be in the future.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Gender</mat-label>
+      <mat-select formControlName="gender">
+        <mat-option value="male">Male</mat-option>
+        <mat-option value="female">Female</mat-option>
+        <mat-option value="other">Other</mat-option>
+      </mat-select>
+      <mat-error *ngIf="patientForm.get('gender')?.hasError('required')"
+        >Gender is required.</mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Blood Group</mat-label>
+      <mat-select formControlName="bloodGroup">
+        <mat-option value="A+">A+</mat-option>
+        <mat-option value="A-">A-</mat-option>
+        <mat-option value="B+">B+</mat-option>
+        <mat-option value="B-">B-</mat-option>
+        <mat-option value="O+">O+</mat-option>
+        <mat-option value="O-">O-</mat-option>
+        <mat-option value="AB+">AB+</mat-option>
+        <mat-option value="AB-">AB-</mat-option>
+      </mat-select>
+      <mat-error *ngIf="patientForm.get('bloodGroup')?.hasError('required')"
+        >Blood group is required.</mat-error
+      >
+    </mat-form-field>
+
+    <div class="spacer">
+      <button mat-raised-button color="primary" type="submit">
+        Add Patient
+      </button>
+      <button mat-raised-button color="warn" (click)="onCancel()">
+        Cancle
+      </button>
+    </div>
+
+    <!-- Success or Error Message -->
+    <div *ngIf="successMessage" class="success-message">
+      {{ successMessage }}
+    </div>
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+  </form>
+</mat-card>

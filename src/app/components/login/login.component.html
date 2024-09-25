@@ -1,0 +1,47 @@
+<div class="login-container">
+  <div class="left-content">
+  </div>
+
+  <div class="right-content">
+    <div class="right-content">
+      <mat-card class="login-card">
+        <h2 class="login-title">Login</h2>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          
+          <!-- Mobile Field -->
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Mobile</mat-label>
+            <input
+              matInput
+              type="text"
+              formControlName="mobile"
+              placeholder="Enter your mobile"
+            />
+          </mat-form-field>
+    
+          <!-- Password Field -->
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Password</mat-label>
+            <input
+              matInput
+              type="password"
+              formControlName="password"
+              placeholder="Enter your password"
+            />
+          </mat-form-field>
+    
+          <!-- Submit Button -->
+          <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+            [disabled]="loginForm.invalid"
+            class="login-button"
+          >
+            Login
+          </button>
+        </form>
+      </mat-card>
+    </div>
+    
+</div>

@@ -1,0 +1,37 @@
+.cart-card {
+    max-width: 600px;
+    background-color: #f9f9f9; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .cart-item-price {
+    font-weight: bold;
+    color: #2c3e50; 
+  }
+  
+  .cart-actions {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+  }
+  
+  mat-card-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2e7d32;
+  }
+  
+  button[mat-button] {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-right: 10px;
+  }
+  

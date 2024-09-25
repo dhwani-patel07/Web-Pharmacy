@@ -1,0 +1,68 @@
+.checkout-card {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #d3eaef;
+    border-radius: 8px;
+  }
+  
+  .checkout-title {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #3f51b5;
+  }
+  
+  .section-spacing {
+    margin-bottom: 20px;
+  }
+  
+  .section-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #5c6bc0;
+  }
+  
+  .patient-details p {
+    margin: 5px 0;
+    font-size: 16px;
+  }
+  
+  .medicine-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+  }
+  
+  .medicine-info {
+    font-size: 16px;
+    color: black;
+  }
+  
+  .total-amount {
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .success-message {
+    color: green;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 15px;
+  }
+  

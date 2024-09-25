@@ -1,0 +1,59 @@
+<div>
+  <!-- Header with Search Bar and Buttons -->
+  <div class="header">
+    <mat-toolbar>
+      <h1>eVitalRx</h1>
+      <span class="spacer"></span>
+
+      <!-- Search Bar -->
+      <mat-form-field class="search-field" appearance="outline">
+        <mat-label>Search Medicines</mat-label>
+        <input
+          matInput
+          (input)="onSearch($event)"
+          placeholder="Enter medicine name"
+        />
+      </mat-form-field>
+
+      <div class="dashboard-container">
+        <button
+          mat-raised-button
+          color="primary"
+          (click)="openAddPatientDialog()"
+        >
+          Add Patient
+        </button>
+      </div>
+
+      <!-- Cart Button -->
+      <button mat-raised-button color="accent" (click)="openCartDialog()">
+        Cart ({{ cart.length }})
+      </button>
+    </mat-toolbar>
+  </div>
+
+  <!-- Medicine Search Results -->
+  <div class="dashboard-bg"></div>
+  <div *ngIf="medicines.length > 0" class="medicine-list">
+    <mat-card *ngFor="let medicine of medicines" class="medicine-card">
+      <mat-card-header>
+        <mat-card-title>{{ medicine.medicine_name }}</mat-card-title>
+        <mat-card-subtitle>{{ medicine.content }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p><strong>Size:</strong> {{ medicine.size }}</p>
+        <p><strong>Price:</strong> ${{ medicine.price }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="addToCart(medicine)">
+          Add to Cart
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <!-- No search results message -->
+  <div *ngIf="medicines.length === 0 && searchTerm" class="no-results">
+    <p>No results found for "{{ searchTerm }}".</p>
+  </div>
+</div>
